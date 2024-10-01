@@ -1,0 +1,20 @@
+.card-container {
+    display: flex;
+
+    /* Centrar horizontalmente */
+    justify-content: center;
+    /* Centrar verticalmente */
+    align-items: center;
+
+    margin-top: 100px;
+}
+
+
+.form-custom {
+    min-width: 150px;
+    width: 100%;
+}
+
+.input-custom {
+    width: 100%;
+}
