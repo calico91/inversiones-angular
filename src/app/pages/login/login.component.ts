@@ -8,7 +8,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -40,6 +40,7 @@ export class LoginComponent {
     this.loginService.login(loginRequest).subscribe({
       next: (response) => {
         localStorage.setItem("token", response.data.token)
+        localStorage.setItem("username", response.data.username)
         this.router.navigate(['inicio'])
       },
       error: (error) => {
